@@ -1,15 +1,21 @@
 
-/* VARIABLES */
+/* =====================================
+   VARIABLES - PALETA NARANJA Y NEGRO
+===================================== */
+
 :root {
-    --ink: #171a17;
-    --muted: #737970;
-    --paper: #f3f3ed;
-    --lime: #c6f15b;
-    --dark: #171c18;
+    --ink: #151515;
+    --muted: #77736e;
+    --paper: #f4f1eb;
+    --lime: #ff6b1a;
+    --dark: #191919;
 }
 
 
-/* CONFIGURACIÓN GENERAL */
+/* =====================================
+   CONFIGURACIÓN GENERAL
+===================================== */
+
 * {
     box-sizing: border-box;
 }
@@ -31,7 +37,10 @@ a {
 }
 
 
-/* CABECERA */
+/* =====================================
+   CABECERA
+===================================== */
+
 .site-header {
     height: 82px;
     padding: 0 7.2%;
@@ -57,6 +66,7 @@ a {
     display: grid;
     place-items: center;
     background: var(--lime);
+    color: var(--ink);
     font-family: 'Oswald', sans-serif;
     font-size: 17px;
 }
@@ -78,17 +88,26 @@ a {
 }
 
 .nav a:not(.nav-cta):hover {
-    color: #6b8c2b;
+    color: #e6530b;
 }
 
 .nav-cta {
     padding: 13px 18px;
     background: var(--ink);
     color: white;
+    transition: background .3s ease;
+}
+
+.nav-cta:hover {
+    background: var(--lime);
+    color: var(--ink);
 }
 
 
-/* HERO */
+/* =====================================
+   HERO
+===================================== */
+
 .hero {
     min-height: 650px;
     height: min(760px, calc(100vh - 82px));
@@ -98,7 +117,7 @@ a {
     overflow: hidden;
 
     background:
-        #242b26
+        #242424
         url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=2000&q=85')
         center 46% / cover no-repeat;
 
@@ -110,9 +129,9 @@ a {
     inset: 0;
     background: linear-gradient(
         90deg,
-        rgba(10,15,12,.91) 0%,
-        rgba(10,15,12,.72) 48%,
-        rgba(10,15,12,.12) 100%
+        rgba(10,10,10,.94) 0%,
+        rgba(10,10,10,.76) 48%,
+        rgba(10,10,10,.16) 100%
     );
 }
 
@@ -133,7 +152,7 @@ a {
 }
 
 .eyebrow {
-    color: #e3e8df;
+    color: #e8e5df;
 }
 
 h1,
@@ -155,7 +174,7 @@ h1 em {
 
 .hero-copy {
     max-width: 430px;
-    color: #d2d7d0;
+    color: #d5d2ce;
     font-size: 14px;
     line-height: 1.8;
 }
@@ -174,11 +193,17 @@ h1 em {
     font-size: 10px;
     font-weight: 700;
     letter-spacing: .13em;
+    transition: all .3s ease;
 }
 
 .button-primary {
     background: var(--lime);
     color: var(--ink);
+}
+
+.button-primary:hover {
+    background: white;
+    transform: translateY(-3px);
 }
 
 .text-link {
@@ -199,7 +224,7 @@ h1 em {
     right: 7%;
     display: flex;
     justify-content: space-between;
-    color: #d5dbd3;
+    color: #d5d2ce;
     font-size: 9px;
     letter-spacing: .16em;
 }
@@ -209,7 +234,10 @@ h1 em {
 }
 
 
-/* SOBRE MÍ */
+/* =====================================
+   SOBRE MÍ
+===================================== */
+
 .section-wrap {
     width: min(1120px, 86%);
     margin: 0 auto;
@@ -227,12 +255,12 @@ h1 em {
 }
 
 .section-kicker {
-    color: #81877e;
+    color: #817b74;
 }
 
 .overline {
     margin-bottom: 17px;
-    color: #77806d;
+    color: #a14b23;
 }
 
 .intro h2,
@@ -245,12 +273,12 @@ h1 em {
 
 .intro h2 span,
 .method h2 span {
-    color: #849e4c;
+    color: #f06a25;
 }
 
 .body-copy {
     max-width: 520px;
-    color: #646b62;
+    color: #64615c;
     font-size: 13px;
     line-height: 1.9;
 }
@@ -259,10 +287,15 @@ h1 em {
     display: inline-block;
     margin-top: 18px;
     padding-bottom: 9px;
-    border-bottom: 1px solid #a8b294;
+    border-bottom: 1px solid #ed9a70;
     font-size: 9px;
     font-weight: 700;
     letter-spacing: .13em;
+    transition: color .3s ease;
+}
+
+.underlined-link:hover {
+    color: #e6530b;
 }
 
 .intro-stat {
@@ -275,6 +308,7 @@ h1 em {
 .intro-stat strong {
     font-family: 'Oswald', sans-serif;
     font-size: 58px;
+    color: var(--ink);
 }
 
 .intro-stat span {
@@ -286,7 +320,10 @@ h1 em {
 }
 
 
-/* SERVICIOS */
+/* =====================================
+   SERVICIOS
+===================================== */
+
 .services {
     padding: 90px 0 105px;
     background: var(--dark);
@@ -294,7 +331,7 @@ h1 em {
 }
 
 .light {
-    color: #a6b09f;
+    color: #b9b3ab;
 }
 
 .services-heading {
@@ -315,7 +352,7 @@ h1 em {
 
 .services-lead {
     max-width: 330px;
-    color: #b7beb5;
+    color: #c2bdb6;
     font-size: 13px;
     line-height: 1.8;
 }
@@ -323,8 +360,8 @@ h1 em {
 .service-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    border-top: 1px solid #465047;
-    border-bottom: 1px solid #465047;
+    border-top: 1px solid #45413e;
+    border-bottom: 1px solid #45413e;
 }
 
 .service-card {
@@ -335,11 +372,11 @@ h1 em {
 
 .service-card + .service-card {
     padding-left: 28px;
-    border-left: 1px solid #465047;
+    border-left: 1px solid #45413e;
 }
 
 .service-number {
-    color: #9aa394;
+    color: #aaa39a;
     font-size: 10px;
 }
 
@@ -360,7 +397,7 @@ h1 em {
 .service-card p {
     max-width: 280px;
     min-height: 58px;
-    color: #b7beb5;
+    color: #c2bdb6;
     font-size: 12px;
     line-height: 1.7;
 }
@@ -372,10 +409,18 @@ h1 em {
     font-size: 9px;
     font-weight: 700;
     letter-spacing: .12em;
+    transition: color .3s ease;
+}
+
+.service-card a:hover {
+    color: white;
 }
 
 
-/* MÉTODO */
+/* =====================================
+   MÉTODO
+===================================== */
+
 .method {
     display: grid;
     grid-template-columns: 1fr 2.1fr;
@@ -389,7 +434,7 @@ h1 em {
 }
 
 .steps {
-    border-top: 1px solid #d3d7cc;
+    border-top: 1px solid #d8d2c9;
 }
 
 .step {
@@ -397,11 +442,11 @@ h1 em {
     grid-template-columns: 65px 1fr;
     gap: 15px;
     padding: 22px 0;
-    border-bottom: 1px solid #d3d7cc;
+    border-bottom: 1px solid #d8d2c9;
 }
 
 .step > span {
-    color: #82964e;
+    color: #f06a25;
     font-family: 'Oswald', sans-serif;
     font-size: 23px;
 }
@@ -414,16 +459,20 @@ h1 em {
 
 .step p {
     margin: 0;
-    color: #6c7369;
+    color: #6c6760;
     font-size: 12px;
     line-height: 1.7;
 }
 
 
-/* CONTACTO */
+/* =====================================
+   CONTACTO
+===================================== */
+
 .cta {
     padding: 100px 7%;
     background: var(--lime);
+    color: var(--ink);
 }
 
 .cta-inner {
@@ -432,7 +481,7 @@ h1 em {
 }
 
 .cta .overline {
-    color: #46562b;
+    color: #7d3517;
 }
 
 .cta h2 {
@@ -442,12 +491,12 @@ h1 em {
 }
 
 .cta h2 span {
-    color: #627b32;
+    color: #a13e12;
 }
 
 .cta-inner > p:not(.overline) {
     max-width: 390px;
-    color: #46513a;
+    color: #482718;
     font-size: 13px;
     line-height: 1.8;
 }
@@ -457,8 +506,17 @@ h1 em {
     color: white;
 }
 
+.button-dark:hover {
+    background: white;
+    color: var(--ink);
+    transform: translateY(-3px);
+}
 
-/* PIE DE PÁGINA */
+
+/* =====================================
+   PIE DE PÁGINA
+===================================== */
+
 .footer {
     min-height: 105px;
     padding: 25px 7%;
@@ -470,7 +528,7 @@ h1 em {
 }
 
 .footer p {
-    color: #7b8178;
+    color: #7b756e;
     font-size: 10px;
 }
 
@@ -484,11 +542,17 @@ h1 em {
     height: 30px;
     display: grid;
     place-items: center;
-    border: 1px solid #cbd0c5;
+    border: 1px solid #c9c1b7;
     font-size: 9px;
     font-weight: 700;
+    transition: all .3s ease;
 }
 
+.socials a:hover {
+    background: var(--lime);
+    border-color: var(--lime);
+    color: var(--ink);
+}
 
 
 /* =====================================
@@ -496,7 +560,9 @@ h1 em {
    RUBÉN MERINO
 ===================================== */
 
+
 /* TABLETS Y PORTÁTILES PEQUEÑOS */
+
 @media screen and (max-width: 1024px) {
 
     .site-header {
@@ -538,7 +604,10 @@ h1 em {
 }
 
 
-/* TABLETS */
+/* =====================================
+   TABLETS
+===================================== */
+
 @media screen and (max-width: 768px) {
 
     .site-header {
@@ -601,7 +670,7 @@ h1 em {
         min-height: auto;
         padding: 30px 0;
         border-left: none;
-        border-bottom: 1px solid #465047;
+        border-bottom: 1px solid #45413e;
     }
 
     .service-card:last-child {
@@ -628,10 +697,14 @@ h1 em {
 }
 
 
-/* MÓVILES */
+/* =====================================
+   MÓVILES
+===================================== */
+
 @media screen and (max-width: 576px) {
 
     /* CABECERA */
+
     .site-header {
         height: 68px;
         padding: 0 5%;
@@ -650,7 +723,9 @@ h1 em {
         display: none;
     }
 
+
     /* HERO */
+
     .hero {
         min-height: 570px;
         background-position: 60% center;
@@ -659,8 +734,8 @@ h1 em {
     .hero-overlay {
         background: linear-gradient(
             90deg,
-            rgba(10,15,12,.92),
-            rgba(10,15,12,.65)
+            rgba(10,10,10,.94),
+            rgba(10,10,10,.68)
         );
     }
 
@@ -696,7 +771,9 @@ h1 em {
         gap: 10px;
     }
 
+
     /* SOBRE MÍ */
+
     .section-wrap {
         width: 90%;
     }
@@ -715,7 +792,9 @@ h1 em {
         font-size: 12px;
     }
 
+
     /* SERVICIOS */
+
     .services {
         padding: 70px 0;
     }
@@ -739,7 +818,9 @@ h1 em {
         font-size: 25px;
     }
 
+
     /* MÉTODO */
+
     .method {
         padding: 70px 0;
     }
@@ -753,7 +834,9 @@ h1 em {
         font-size: 11px;
     }
 
+
     /* CONTACTO */
+
     .cta {
         padding: 75px 5%;
     }
@@ -766,7 +849,9 @@ h1 em {
         font-size: 12px;
     }
 
+
     /* FOOTER */
+
     .footer {
         padding: 30px 5%;
         align-items: flex-start;
@@ -779,7 +864,10 @@ h1 em {
 }
 
 
-/* MÓVILES MUY PEQUEÑOS */
+/* =====================================
+   MÓVILES MUY PEQUEÑOS
+===================================== */
+
 @media screen and (max-width: 360px) {
 
     h1 {
@@ -807,7 +895,10 @@ h1 em {
 }
 
 
-/* MÓVIL EN HORIZONTAL */
+/* =====================================
+   MÓVIL EN HORIZONTAL
+===================================== */
+
 @media screen and (max-height: 500px) and (orientation: landscape) {
 
     .hero {
@@ -821,7 +912,10 @@ h1 em {
 }
 
 
-/* ACCESIBILIDAD */
+/* =====================================
+   ACCESIBILIDAD
+===================================== */
+
 @media (prefers-reduced-motion: reduce) {
 
     html {
@@ -835,4 +929,3 @@ h1 em {
         transition-duration: 0.01ms !important;
     }
 }
-
